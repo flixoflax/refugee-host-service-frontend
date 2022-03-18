@@ -1,0 +1,12 @@
+{
+	"Navbar": {
+		"title": "Arrival",
+		"register": "Register",
+		"host": "Host",
+		"host_desc": "Help the people and signup as a host",
+		"refugee": "Refugee",
+		"refugee_desc": "Register as or for a refugee",
+		"login": "Login",
+		"become_a_volunteer": "Become a volunteer"
+	}
+}

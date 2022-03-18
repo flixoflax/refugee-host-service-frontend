@@ -15,11 +15,14 @@ import {
 } from '@chakra-ui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import Link from 'next/link'
+import { useTranslations } from 'next-intl'
 import DesktopNav from './desktop/DesktopNav'
 import MobileNav from './mobile/MobileNav'
+import LanguageMenu from '../menus/LanguageMenu'
 
 export default function Navbar() {
 	const { isOpen, onToggle } = useDisclosure()
+	const t = useTranslations('Navbar')
 
 	return (
 		<Box
@@ -28,11 +31,14 @@ export default function Navbar() {
 			borderColor={useColorModeValue('gray.200', 'gray.900')}
 			bg={useColorModeValue('white', 'gray.800')}
 			color={useColorModeValue('gray.600', 'white')}
+			position='fixed'
+			width='100%'
+			zIndex={999}
 		>
 			<Container maxW='container.xl'>
 				<Flex minH='70px' py={{ base: 2 }} align='center'>
 					<Flex
-						flex={{ base: 1, md: 'auto' }}
+						flex={{ base: 0, md: 'auto' }}
 						ml={{ base: -2 }}
 						display={{ base: 'flex', md: 'none' }}
 					>
@@ -51,18 +57,18 @@ export default function Navbar() {
 					</Flex>
 					<Flex
 						flex={{ base: 1 }}
-						justify={{ base: 'center', md: 'start' }}
+						justify={{ base: 'left', md: 'start' }}
 						ml={{ base: 2, md: 0 }}
 					>
 						<Text
-							textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
+							textAlign={useBreakpointValue({ base: 'left', md: 'left' })}
 							fontFamily='heading'
 							fontWeight='bold'
-							fontSize={{ base: 'md', md: 'lg' }}
+							fontSize={{ base: 'lg', md: 'lg' }}
 							color={useColorModeValue('gray.900', 'white')}
 							cursor='pointer'
 						>
-							<Link href='/'>Arrival</Link>
+							<Link href='/'>{t('title')}</Link>
 						</Text>
 
 						<Flex display={{ base: 'none', md: 'flex' }} ml={10}>
@@ -76,8 +82,9 @@ export default function Navbar() {
 						direction='row'
 						spacing={6}
 					>
+						<LanguageMenu />
 						<Button fontWeight={600} as='a' variant='link' href='#'>
-							Login
+							{t('login')}
 						</Button>
 						<Button
 							display={{ base: 'none', md: 'inline-flex' }}
@@ -90,7 +97,7 @@ export default function Navbar() {
 								bg: 'green.300',
 							}}
 						>
-							Become a volunteer
+							{t('become_a_volunteer')}
 						</Button>
 					</Stack>
 				</Flex>

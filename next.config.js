@@ -5,6 +5,9 @@ const nextConfig = {
 		locales: ['en', 'de', 'ua', 'ru'],
 		defaultLocale: 'en',
 	},
+	images: {
+		domains: ['countryflagsapi.com'],
+	},
 }
 
 module.exports = nextConfig

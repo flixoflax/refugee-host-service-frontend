@@ -1,17 +1,15 @@
-import { Divider, Heading, Link as ChakraLink, Text } from '@chakra-ui/react'
-import Link from 'next/link'
+import { Box, SimpleGrid } from '@chakra-ui/react'
+import Image from 'next/image'
 import React from 'react'
 
-export default function Home() {
+export default function Custom500() {
 	return (
-		<>
-			<Heading>Refugee Host Service</Heading>
-			<Text mt={4}>Frontend project to support refugees.</Text>
-			<Divider my={4} />
-			<Link href='/refugee/registration' passHref>
-				<ChakraLink color='blue.500'>Refugee registration</ChakraLink>
-			</Link>
-		</>
+		<SimpleGrid columns={2}>
+			<Box />
+			<Box>
+				<Image src='/404.svg' objectFit='cover' layout='fill' />
+			</Box>
+		</SimpleGrid>
 	)
 }
 

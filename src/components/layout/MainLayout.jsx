@@ -6,7 +6,7 @@ export default function MainLayout({ children }) {
 	return (
 		<>
 			<Navbar />
-			<Container maxW='container.xl' pt={{ base: 10, md: 20 }}>
+			<Container maxW='container.xl' pt={{ base: 24, md: 36 }}>
 				{children}
 			</Container>
 		</>

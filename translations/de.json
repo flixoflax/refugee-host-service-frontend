@@ -1,0 +1,12 @@
+{
+	"Navbar": {
+		"title": "Ankunft",
+		"register": "Registrieren",
+		"host": "Gastgeber",
+		"host_desc": "Helfen Sie den Leuten und melden Sie sich als Gastgeber an",
+		"refugee": "Flüchtling",
+		"refugee_desc": "Registriere dich als oder für einen Flüchtling",
+		"login": "Login",
+		"become_a_volunteer": "Werde Helfer"
+	}
+}
