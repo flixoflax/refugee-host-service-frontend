@@ -10,8 +10,10 @@ import {
 import { ChevronRightIcon } from '@heroicons/react/outline'
 import React from 'react'
 import Link from 'next/link'
+import { useTranslations } from 'next-intl'
 
 export default function DesktopSubNav({ label, href, subLabel }) {
+	const t = useTranslations('Navbar')
 	return (
 		<Link href={href} passHref>
 			<ChakraLink
@@ -28,9 +30,9 @@ export default function DesktopSubNav({ label, href, subLabel }) {
 							_groupHover={{ color: 'green.400' }}
 							fontWeight={500}
 						>
-							{label}
+							{t(label)}
 						</Text>
-						<Text fontSize='sm'>{subLabel}</Text>
+						<Text fontSize='sm'>{t(subLabel)}</Text>
 					</Box>
 					<Flex
 						transition='all .3s ease'

@@ -1,8 +1,10 @@
 import { Box, Button, Code, Flex, Heading, SimpleGrid } from '@chakra-ui/react'
 import Image from 'next/image'
 import React from 'react'
+import { useTranslations } from 'next-intl'
 
 export default function Custom404() {
+	const t = useTranslations('404')
 	return (
 		<SimpleGrid columns={{ base: 1, md: 2 }}>
 			<Box height={{ base: '20rem', md: '30rem' }} position='relative'>
@@ -13,7 +15,7 @@ export default function Custom404() {
 					<Code size='md' color='gray.600' mb={2}>
 						404 - NOT FOUND
 					</Code>
-					<Heading>The page you were looking for could not be found.</Heading>
+					<Heading>{t('title')}</Heading>
 					<Button
 						bg='green.400'
 						color='white'
@@ -23,7 +25,7 @@ export default function Custom404() {
 							bg: 'green.300',
 						}}
 					>
-						Get back on track
+						{t('button')}
 					</Button>
 				</Box>
 			</Flex>

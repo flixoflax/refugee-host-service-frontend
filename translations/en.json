@@ -8,5 +8,9 @@
 		"refugee_desc": "Register as or for a refugee",
 		"login": "Login",
 		"become_a_volunteer": "Become a volunteer"
+	},
+	"404": {
+		"title": "The page you were looking for could not be found.",
+		"button": "Get back to start"
 	}
 }

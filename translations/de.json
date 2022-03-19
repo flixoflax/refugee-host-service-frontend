@@ -8,5 +8,10 @@
 		"refugee_desc": "Registriere dich als oder für einen Flüchtling",
 		"login": "Login",
 		"become_a_volunteer": "Werde Helfer"
+	},
+
+	"404": {
+		"title": "Die von dir gesuchte Seite konnte nicht gefunden werden.",
+		"button": "Zurück zum Anfang"
 	}
 }

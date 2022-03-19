@@ -13,9 +13,11 @@ import {
 	useDisclosure,
 } from '@chakra-ui/react'
 import { ChevronDownIcon } from '@heroicons/react/outline'
+import { useTranslations } from 'next-intl'
 import NAV_ITEMS from '../data'
 
 export default function MobileNav() {
+	const t = useTranslations('Navbar')
 	return (
 		<Stack
 			bg={useColorModeValue('white', 'gray.800')}
@@ -38,7 +40,7 @@ export default function MobileNav() {
 						bg: 'green.300',
 					}}
 				>
-					Become a volunteer
+					{t('become_a_volunteer')}
 				</Button>
 			</Box>
 		</Stack>
@@ -47,6 +49,7 @@ export default function MobileNav() {
 
 function MobileNavItem({ label, children, href }) {
 	const { isOpen, onToggle } = useDisclosure()
+	const t = useTranslations('Navbar')
 
 	return (
 		<Stack spacing={4} onClick={children && onToggle}>
@@ -64,7 +67,7 @@ function MobileNavItem({ label, children, href }) {
 					fontWeight={600}
 					color={useColorModeValue('gray.600', 'gray.200')}
 				>
-					{label}
+					{t(label)}
 				</Text>
 				{children && (
 					<Icon
@@ -89,7 +92,7 @@ function MobileNavItem({ label, children, href }) {
 					{children &&
 						children.map((child) => (
 							<Link key={child.label} passHref href={child.href}>
-								<ChakraLink py={2}>{child.label}</ChakraLink>
+								<ChakraLink py={2}>{t(child.label)}</ChakraLink>
 							</Link>
 						))}
 				</Stack>

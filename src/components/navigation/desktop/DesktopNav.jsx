@@ -7,6 +7,7 @@ import {
 	Stack,
 	useColorModeValue,
 } from '@chakra-ui/react'
+import { useTranslations } from 'next-intl'
 import React from 'react'
 import NAV_ITEMS from '../data'
 import DesktopSubNav from './DesktopSubNav'
@@ -15,6 +16,7 @@ export default function DesktopNav() {
 	const linkColor = useColorModeValue('gray.600', 'gray.200')
 	const linkHoverColor = useColorModeValue('gray.800', 'white')
 	const popoverContentBgColor = useColorModeValue('white', 'gray.800')
+	const t = useTranslations('Navbar')
 
 	return (
 		<Stack direction='row' spacing={4}>
@@ -33,7 +35,7 @@ export default function DesktopNav() {
 									color: linkHoverColor,
 								}}
 							>
-								{navItem.label}
+								{t(navItem.label)}
 							</Link>
 						</PopoverTrigger>
 

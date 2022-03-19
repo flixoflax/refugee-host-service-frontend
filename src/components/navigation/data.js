@@ -1,15 +1,15 @@
 const NAV_ITEMS = [
 	{
-		label: 'Register',
+		label: 'register',
 		children: [
 			{
-				label: 'Host',
-				subLabel: 'Help the people and sign up as a host',
+				label: 'host',
+				subLabel: 'host_desc',
 				href: '/host/register',
 			},
 			{
-				label: 'Refugee',
-				subLabel: 'Register as a refugee or for a refugee',
+				label: 'refugee',
+				subLabel: 'refugee_desc',
 				href: '/refugee/register',
 			},
 		],
