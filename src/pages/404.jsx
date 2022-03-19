@@ -1,7 +1,16 @@
-import { Box, Button, Code, Flex, Heading, SimpleGrid } from '@chakra-ui/react'
+import {
+	Box,
+	Button,
+	Code,
+	Flex,
+	Heading,
+	SimpleGrid,
+	Text,
+} from '@chakra-ui/react'
 import Image from 'next/image'
 import React from 'react'
 import { useTranslations } from 'next-intl'
+import Link from 'next/link'
 
 export default function Custom404() {
 	const t = useTranslations('404')
@@ -16,17 +25,20 @@ export default function Custom404() {
 						404 - NOT FOUND
 					</Code>
 					<Heading>{t('title')}</Heading>
-					<Button
-						bg='green.400'
-						color='white'
-						size='lg'
-						my={10}
-						_hover={{
-							bg: 'green.300',
-						}}
-					>
-						{t('button')}
-					</Button>
+					<Link href='/' passHref>
+						<Button
+							as={Text}
+							bg='green.400'
+							color='white'
+							size='lg'
+							my={10}
+							_hover={{
+								bg: 'green.300',
+							}}
+						>
+							{t('button')}
+						</Button>
+					</Link>
 				</Box>
 			</Flex>
 		</SimpleGrid>

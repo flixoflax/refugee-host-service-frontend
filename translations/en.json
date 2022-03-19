@@ -12,5 +12,9 @@
 	"404": {
 		"title": "The page you were looking for could not be found.",
 		"button": "Get back to start"
+	},
+	"500": {
+		"title": "Oh no! Something went wrong.",
+		"button": "Get back to start"
 	}
 }
