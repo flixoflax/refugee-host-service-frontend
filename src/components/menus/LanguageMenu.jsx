@@ -34,10 +34,10 @@ export default function LanguageMenu() {
 				alignContent='center'
 				bg='white'
 				_hover={{
-					bg: 'gray.50',
+					bg: 'gray.100',
 				}}
 				_active={{
-					bg: 'gray.50',
+					bg: 'gray.100',
 				}}
 			>
 				<Box minW='1.5em'>
